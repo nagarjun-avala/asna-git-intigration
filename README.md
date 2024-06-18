@@ -7,9 +7,9 @@ This service integrates GitHub with Asana. When a new issue is created on GitHub
 ## Setup
 
 1. Clone the repository.
-2. Install dependencies: `npm install express body-parser axios`
+2. Install dependencies: `npm install`
 3. Set your Asana Access Token, Project ID, and GitHub Webhook Secret in `app.js`.
-4. Run the service: `node app.js`
+4. Run the service: `npm start`
 5. Configure a webhook in your GitHub repository to point to `http://your_server:3000/webhook`.
 
 ## Usage

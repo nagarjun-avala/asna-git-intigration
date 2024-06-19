@@ -72,8 +72,8 @@ function createAsanaTask(issue) {
 
 function getAsanaUser(githubUsername) {
     // Implement a method to map GitHub username to Asana user ID
-    console.log("githubUsername",githubUsername)
-    return 'your_asana_user_id';
+    
+    return githubUsername;
 }
 
 const PORT = process.env.PORT || 3000;

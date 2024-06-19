@@ -66,7 +66,7 @@ function createAsanaTask(issue) {
             console.log('Asana task created successfully');
         })
         .catch(error => {
-            console.error('Failed to create Asana task:', error.response.data);
+            console.error('Failed to create Asana task:', error.response.data,"Data: ", data);
         });
 }
 

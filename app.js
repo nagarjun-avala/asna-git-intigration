@@ -19,8 +19,7 @@ app.post("/webhook", (req, res) => {
     if (req.body.action === "opened") {
       const issue = req.body.issue;
       if (issue) {
-        console.log("Issue created:", issue);
-        // createAsanaTask(issue);
+        createAsanaTask(issue);
       }
     }
     res.status(200).send("OK");
@@ -46,7 +45,7 @@ function createAsanaTask(issue) {
     external: {
       data: issue.html_url,
     },
-    // assignee: getAsanaUser(issue.user.login),
+    assignee: "me",
   };
 
   let client = Asana.ApiClient.instance;
@@ -68,12 +67,6 @@ function createAsanaTask(issue) {
       console.error(error.response.body, data);
     }
   );
-}
-
-function getAsanaUser(githubUsername) {
-  // Implement a method to map GitHub username to Asana user ID
-
-  return githubUsername;
 }
 
 const PORT = process.env.PORT || 3000;

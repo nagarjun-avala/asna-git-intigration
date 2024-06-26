@@ -19,7 +19,8 @@ app.post("/webhook", (req, res) => {
     if (req.body.action === "opened") {
       const issue = req.body.issue;
       if (issue) {
-        createAsanaTask(issue);
+        console.log("Issue created:", issue);
+        // createAsanaTask(issue);
       }
     }
     res.status(200).send("OK");

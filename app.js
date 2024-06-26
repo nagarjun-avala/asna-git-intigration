@@ -45,7 +45,7 @@ function createAsanaTask(issue) {
     external: {
       data: issue.html_url,
     },
-    assignee: getAsanaUser(issue.user.login),
+    // assignee: getAsanaUser(issue.user.login),
   };
 
   let client = Asana.ApiClient.instance;
